@@ -1,7 +1,7 @@
 import random
 import time
 import streamlit as st
-Start=start_time()
+Start=Start_time()
 End=end_time()
 t=Start-End
 if 'ran' not in st.session_state or st.session_state.ran < 1:
