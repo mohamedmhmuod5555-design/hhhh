@@ -14,7 +14,7 @@ if 'start_time' not in st.session_state:
 if 'end_time' not in st.session_state:
    st.session_state.end_time = time.time()
 if 'taken' not in st.session_state:
-   st.session_state.taken =  st.session_state.end_time - st.session_state.start_time
+   st.session_state.taken =  time.Time() - st.session_state.start_time
 if 'count' not in st.session_state:
   st.session_state.count=0
 if 'num1' not in st.session_state:
