@@ -35,9 +35,9 @@ number=st.number_input("ادخل النتيجه ")
 if st.button("تأكيد التخمين "):
    taken=time.time()- st.session_state.start_time
    st.session_state.count += 1
-  if taken >10:
-     st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
-     st.session_state.num = 0
+   if taken >10:
+      st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
+      st.session_state.num = 0
   else : 
       if number == sc:
        st.success("اجابتك صحيحه ! لقد احسنت")
