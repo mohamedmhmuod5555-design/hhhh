@@ -1,9 +1,6 @@
 import random
 import time
 import streamlit as st
-Start=st.Start_time()
-End=end_time()
-t=Start-End
 if 'ran' not in st.session_state or st.session_state.ran < 1:
   st.session_state.ran=20
 if 'level' not in st.session_state:
@@ -12,6 +9,8 @@ if 'num' not in st.session_state:
   st.session_state.num=0
 if 'sc' not in st.session_state:
   st.session_state.sc=0
+ if 'start_time' not in st.session_state:
+  st.session_state.start_time=time.Time()
 if 'count' not in st.session_state:
   st.session_state.count=0
 if 'num1' not in st.session_state:
