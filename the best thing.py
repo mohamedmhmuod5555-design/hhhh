@@ -38,7 +38,7 @@ st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 if st.button("تأكيد التخمين "):
   st.session_state.count += 1
-  if  st.session_state.taken >60:
+  if  st.session_state.taken >=60:
    st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
    st.session_state.num = 0
   else:
@@ -52,6 +52,7 @@ if st.button("السؤال التالي "):
     del st.session_state.num1
     del st.session_state.num2
     del st.session_state.sign
+    st.session_state.taken=0
     st.rerun()
 if st.session_state.num > 0 and st.session_state.num % 10 == 0:
   st.success("انت بطل! تحدي صديقك انه بالطبع لن يستطيع ان يصل لمستواك  ")
