@@ -11,8 +11,6 @@ if 'sc' not in st.session_state:
   st.session_state.sc=0
 if 'start_time' not in st.session_state:
    st.session_state.start_time = time.time()
-if 'end_time' not in st.session_state:
-   st.session_state.end_time = time.time()
 if 'count' not in st.session_state:
   st.session_state.count=0
 if 'num1' not in st.session_state:
@@ -37,14 +35,14 @@ number=st.number_input("ادخل النتيجه ")
 if st.button("تأكيد التخمين "):
   taken=time.time()- st.session_state.start_time
   st.session_state.count += 1
-  if taken <10:
+  if taken .10:
      st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
      st.session_state.num = 0
-  elif  st.session_state.taken >10:
+  else  st.session_state.taken >10:
       if number == sc:
        st.success("اجابتك صحيحه ! لقد احسنت")
        st.session_state.num += 1
-      elif number != sc:
+      else number != sc:
          st.error(f"اجابتك خاطئة! الإجابة الصحيحة كانت : {sc}")
          st.session_state.num = 0
 if st.button("السؤال التالي "):
