@@ -34,9 +34,9 @@ st.title("Welcome to Mohamed's game ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 if st.button("تأكيد التخمين "):
+  st.session_state.count += 1
    if t>60:
     st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
-  st.session_state.count += 1
   if number == sc:
     st.success("اجابتك صحيحه ! لقد احسنت")
     st.session_state.num += 1
