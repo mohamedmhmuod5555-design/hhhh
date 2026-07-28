@@ -39,15 +39,15 @@ number=st.number_input("ادخل النتيجه ")
 if st.button("تأكيد التخمين "):
   st.session_state.count += 1
   if  st.session_state.taken >10:
-   st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
-   st.session_state.num = 0
+     st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
+     st.session_state.num = 0
    else:
       if number == sc:
        st.success("اجابتك صحيحه ! لقد احسنت")
       st.session_state.num += 1
-    else:
-      st.error(f"اجابتك خاطئة! الإجابة الصحيحة كانت : {sc}")
-      st.session_state.num = 0
+      else:
+       st.error(f"اجابتك خاطئة! الإجابة الصحيحة كانت : {sc}")
+       st.session_state.num = 0
 if st.button("السؤال التالي "):
     del st.session_state.num1
     del st.session_state.num2
