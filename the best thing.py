@@ -34,6 +34,8 @@ st.title("Welcome to Mohamed's game ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 if st.button("تأكيد التخمين "):
+   if t>60:
+    st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
   st.session_state.count += 1
   if number == sc:
     st.success("اجابتك صحيحه ! لقد احسنت")
@@ -56,8 +58,7 @@ if st.session_state.num > 0 and st.session_state.num % 10 == 0:
      del st.session_state.sign
      st.session_state.count=0
      st.session_state.num=0
- if t>60:
-   st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
+
 
 st.write("your points are " ,st.session_state.num,"from",st.session_state.count,"Questions" )
 st.write("you are in level",st.session_state.level)
