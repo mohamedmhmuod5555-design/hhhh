@@ -13,8 +13,6 @@ if 'start_time' not in st.session_state:
    st.session_state.start_time = time.time()
 if 'end_time' not in st.session_state:
    st.session_state.end_time = time.time()
-if 'taken' not in st.session_state:
-   st.session_state.taken =  time.Time() - st.session_state.start_time
 if 'count' not in st.session_state:
   st.session_state.count=0
 if 'num1' not in st.session_state:
@@ -37,8 +35,9 @@ st.title("Welcome to Mohamed's game ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 if st.button("تأكيد التخمين "):
+  taken=time.time()- st.session_state.start_time
   st.session_state.count += 1
-  if  st.session_state.taken >10:
+  if taken >10:
      st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
      st.session_state.num = 0
   elif  st.session_state.taken <10:
