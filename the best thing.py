@@ -1,5 +1,9 @@
 import random
+import time
 import streamlit as st
+Start=start_time()
+End=end_time()
+t=Start-End
 if 'ran' not in st.session_state or st.session_state.ran < 1:
   st.session_state.ran=20
 if 'level' not in st.session_state:
@@ -52,6 +56,8 @@ if st.session_state.num > 0 and st.session_state.num % 10 == 0:
      del st.session_state.sign
      st.session_state.count=0
      st.session_state.num=0
+ if t>60:
+   st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
 
 st.write("your points are " ,st.session_state.num,"from",st.session_state.count,"Questions" )
 st.write("you are in level",st.session_state.level)
