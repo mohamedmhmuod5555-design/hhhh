@@ -49,7 +49,7 @@ if st.button("السؤال التالي "):
     del st.session_state.num1
     del st.session_state.num2
     del st.session_state.sign
-    st.session_state.taken=0
+    st.session_state.start_time=0
     st.rerun()
 if st.session_state.num > 0 and st.session_state.num % 10 == 0:
   st.success("انت بطل! تحدي صديقك انه بالطبع لن يستطيع ان يصل لمستواك  ")
