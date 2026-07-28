@@ -10,7 +10,7 @@ if 'num' not in st.session_state:
 if 'sc' not in st.session_state:
   st.session_state.sc=0
  if 'start_time' not in st.session_state:
-  st.session_state.start_time=time.Time()
+   st.session_state.start_time=time.Time()
 if 'count' not in st.session_state:
   st.session_state.count=0
 if 'num1' not in st.session_state:
