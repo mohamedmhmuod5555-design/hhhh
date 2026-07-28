@@ -41,7 +41,7 @@ if st.button("تأكيد التخمين "):
   if  st.session_state.taken >10:
      st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
      st.session_state.num = 0
-     else:
+  elif  st.session_state.taken <10:
       if number == sc:
        st.success("اجابتك صحيحه ! لقد احسنت")
       st.session_state.num += 1
