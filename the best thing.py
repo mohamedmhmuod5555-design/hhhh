@@ -32,8 +32,8 @@ if sign=='/':
 st.title("Welcome to Mohamed's game ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
-taken=time.time()- st.session_state.start_time
 if st.button("تأكيد التخمين "):
+   taken=time.time()- st.session_state.start_time
   st.session_state.count += 1
   if taken >10:
      st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
