@@ -11,6 +11,10 @@ if 'sc' not in st.session_state:
   st.session_state.sc=0
 if 'start_time' not in st.session_state:
    st.session_state.start_time = time.time()
+if 'end_time' not in st.session_state:
+   st.session_state.end_time = time.time()
+if 'taken' not in st.session_state:
+   st.session_state.taken =  st.session_state.end_time - st.session_state.start_time
 if 'count' not in st.session_state:
   st.session_state.count=0
 if 'num1' not in st.session_state:
@@ -34,7 +38,7 @@ st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 if st.button("تأكيد التخمين "):
   st.session_state.count += 1
-  if t>60:
+  if  st.session_state.taken >60:
    st.error("للاسف انتهي الوقت لقد خسرت اعد اللعبه وانا واثق بانك ستفوز ")
   if number == sc:
     st.success("اجابتك صحيحه ! لقد احسنت")
