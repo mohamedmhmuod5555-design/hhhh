@@ -28,8 +28,6 @@ if sign=='/':
  sc=num1/num2
 st.title("Welcome to Mohamed's game ")
 st.write(num1,sign,num2)
-name=st.string_input("ا
-من فضلك ادخل اسمك ")
 number=st.number_input("ادخل النتيجه ")
 if st.button("تأكيد التخمين "):
   st.session_state.count += 1
